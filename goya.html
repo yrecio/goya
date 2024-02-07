@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premios Goya 2024</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="https://www.epdata.es/favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
+</head>
+
+<body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        html {
+            font-family: 'Heebo';
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            background-color: #eef1f3;
+        }
+
+
+
+        main {
+            margin: 4rem auto;
+            width: 1660px;
+            height: 928px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #bloque-superior {
+            display: flex;
+            justify-content: center;
+            height: 63%;
+        }
+
+        #bloque-inferior {
+            display: flex;
+            justify-content: space-between;
+            height: 23%;
+        }
+
+
+
+        .bloque {
+            width: 90%;
+            margin: 0.5rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: left;
+            font-weight: bold;
+            font-size: 1.6rem;
+        }
+
+        .bloque-superior {
+            height: 100%;
+        }
+
+        #bloque-superior-1 {
+            margin-right: 0.5rem;
+            width: 80%;
+        }
+
+        #bloque-titulo {
+            margin-bottom: 0.5rem;
+            width: 100%;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            font-size: 3rem;
+            font-weight: 200;
+            color:#a89267;
+        }
+
+        #bloque-superior-1-contenido {
+            margin-top: 0.5rem;
+            width: 100%;
+            height: 80%;
+        }
+
+        #bloque-superior-1-contenido-superior {
+            margin-top: 0.5rem;
+            width: 100%;
+            height: 49%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
+        #bloque-superior-1-contenido-inferior {
+            margin-top: 0.5rem;
+            width: 100%;
+            height: 49%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
+        #bloque-superior-2 {
+            width: 20%;
+            margin-left: 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        /* Bloques clave de contenido */
+
+        .bloque-superior-1-contenido {
+            background-color: rgb(255, 255, 255);
+            width: 49.6%;
+            height: 100%;
+            background-color: #f5f4f3
+        }
+
+        #mejor-pelicula {}
+
+        #mejor-director {}
+
+        #mejor-actriz-principal {}
+
+        #mejor-actor-principal {}
+
+        .bloque-inferior-contenido {
+            background-color: #f5f4f3;
+            width: 11.6%;
+            height: 100%;
+        }
+
+        .img-premiados {
+            width: 100%;
+            height: 100%;
+        }
+
+        button {
+            margin: 0.8rem;
+            padding: 0.2rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            background-color: #4c3e23;
+            color: white;
+            height: 3rem;
+            width: 25rem;
+            border: #87afb1;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #f19115;
+            cursor: pointer;
+        }
+
+        button:active {
+            background-color: #ae6c15;
+            transform: scale(0.95);
+        }
+
+        fieldset {
+            padding: 1.5rem;
+            border: 0.2px solid #000000;
+            /* Cambia el estilo, ancho y color del borde */
+            margin: 0.5rem;
+        }
+
+        fieldset br {
+            border-color: #cc0000;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #a89267;
+            padding: 0 0.5rem 0 0.5rem;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+        }
+
+        label {
+            font-size: 1.2rem;
+            line-height: 1rem;
+            padding-right: 2rem;
+        }
+
+        .separacion-etiqueta {
+            border: none;
+            height: 0.2px;
+            /* Establece la altura de la línea */
+            background-color: #ddd5c2;
+        }
+    </style>
+
+
+    <main>
+
+        <div class="bloque" id="bloque-superior">
+            <div class="bloque-superior" id="bloque-superior-1">
+                <div id="bloque-titulo">Todos los premiados en los Goya 2024</div>
+                <div id="bloque-superior-1-contenido">
+                    <div id="bloque-superior-1-contenido-superior">
+                        <div class="bloque-superior-1-contenido" id="mejor-pelicula">
+                            <img id="img-mejor-pelicula" class="img-premiados"
+                                src="/img/premiados/mejor-pelicula-generica.png">
+                        </div>
+                        <div class="bloque-superior-1-contenido" id="mejor-director">
+                            <img id="img-mejor-director" class="img-premiados"
+                                src="/img/premiados/mejor-director-generica.png">
+                        </div>
+                    </div>
+                    <div id="bloque-superior-1-contenido-inferior">
+                        <div class="bloque-superior-1-contenido" id="mejor-actriz-principal">
+                            <img id="img-mejor-actriz-protagonista" class="img-premiados"
+                                src="/img/premiados/mejor-actriz-generica.png">
+                        </div>
+                        <div class="bloque-superior-1-contenido" id="mejor-actor-principal">
+                            <img id="img-mejor-actor-protagonista" class="img-premiados"
+                                src="/img/premiados/mejor-actor-generica.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bloque-superior" id="bloque-superior-2"><img src="/img/goya.png"
+                    style="height: 90%; opacity: 0.3" />
+            </div>
+        </div>
+        <div class="bloque" id="bloque-inferior">
+            <div class="bloque-inferior-contenido" id="mejor-actriz-reparto">
+                <img id="img-mejor-actriz-reparto" class="img-premiados"
+                    src="/img/premiados/mejor-actriz-reparto-generica.png">
+            </div>
+            <div class="bloque-inferior-contenido" id="mejor-actor-reparto">
+                <img id="img-mejor-actor-reparto" class="img-premiados"
+                    src="/img/premiados/mejor-actor-reparto-generica.png">
+            </div>
+            <div class="bloque-inferior-contenido" id="mejor-actriz-revelacion">
+                <img id="img-mejor-actriz-revelacion" class="img-premiados"
+                    src="/img/premiados/mejor-actriz-revelacion-generica.png">
+            </div>
+            <div class="bloque-inferior-contenido" id="mejor-actor-revelacion">
+                <img id="img-mejor-actor-revelacion" class="img-premiados"
+                    src="/img/premiados/mejor-actor-revelacion-generica.png">
+            </div>
+            <div class="bloque-inferior-contenido" id="mejor-direccion-novel">
+                <img id="img-mejor-direccion-novel" class="img-premiados"
+                    src="/img/premiados/mejor-direccion-novel-generica.png">
+            </div>
+            <div class="bloque-inferior-contenido" id="mejor-guion">
+                <img id="img-mejor-guion" class="img-premiados" src="/img/premiados/mejor-guion-generica.png">
+            </div>
+            <div class="bloque-inferior-contenido" id="mejor-sonido">
+                <img id="img-mejor-sonido" class="img-premiados" src="/img/premiados/mejor-sonido-generica.png">
+            </div>
+            <div class="bloque-inferior-contenido" id="mejores-efectos">
+                <img id="img-mejores-efectos" class="img-premiados" src="/img/premiados/mejores-efectos-generica.png">
+            </div>
+        </div>
+        <footer>
+            <img src="img/europapress.png" style="width: 7rem; padding-top: 0.2rem" />
+        </footer>
+
+    </main>
+    <div id="boton" style="display: flex; justify-content: center">
+        <button id="descarga-imagen">Descargar la imagen</button>
+    </div>
+
+    <div id="panel"
+        style="width: 100%; padding:1rem; background-color:white; display:flex; justify-content: center; margin-top: 5rem; flex-direction: column">
+        <h2 style="font-size: 2.8rem; text-align: center; color: #cbbea3; font-weight: 200; padding-bottom: 1rem;">
+            Categorías principales</h2>
+        <div id="opciones" style="display: flex; justify-content: center;">
+            <form id="formulario" style="display: flex; flex-direction: row">
+                <div style="display: flex; flex-direction: column;">
+                    <div style="display: flex; flex-direction: row; justify-content: center; padding-bottom:2rem">
+                        <fieldset>
+                            <legend>Mejor película</legend>
+                            <input type="radio" id="especies-abejas" name="mejor-pelicula" value="especies-abejas">
+                            <label for="rojo">20.000 especies de abejas</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="cerrar-ojos" name="mejor-pelicula" value="cerrar-ojos">
+                            <label for="azul">Cerrar los ojos</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="sociedad-nieve" name="mejor-pelicula" value="sociedad-nieve">
+                            <label for="sociedad-nieve">La sociedad de la nieve</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="saben-aquell" name="mejor-pelicula" value="saben-aquell">
+                            <label for="saben-aquell">Saben aquell</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="un-amor" name="mejor-pelicula" value="un-amor">
+                            <label for="un-amor">Un amor</label><br>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Mejor director</legend>
+                            <input type="radio" id="victor-erice" name="mejor-director" value="victor-erice">
+                            <label for="victor-erice">Víctor Erice</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="elena-martin" name="mejor-director" value="elena-martin">
+                            <label for="elena-martin">Elena Martín</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="ja-bayona" name="mejor-director" value="ja-bayona">
+                            <label for="ja-bayona">J.A. Bayona</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="david-trueba" name="mejor-director" value="david-trueba">
+                            <label for="david-trueba">David Trueba</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="isabel-coixet" name="mejor-director" value="isabel-coixet">
+                            <label for="isabel-coixet">Isabel Coixet</label><br>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Mejor actriz protagonista</legend>
+                            <input type="radio" id="patricia-arnaiz" name="mejor-actriz-protagonista"
+                                value="patricia-arnaiz">
+                            <label for="patricia-arnaiz">Patricia L. Arnaiz</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="maria-vazquez" name="mejor-actriz-protagonista"
+                                value="maria-vazquez">
+                            <label for="maria-vazquez">María Vázquez</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="malena-alterio" name="mejor-actriz-protagonista"
+                                value="malena-alterio">
+                            <label for="malena-alterio">Malena Alterio</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="carolina-yuste" name="mejor-actriz-protagonista"
+                                value="carolina-yuste">
+                            <label for="carolina-yuste">Carolina Yuste</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="laia-costa" name="mejor-actriz-protagonista" value="laia-costa">
+                            <label for="laia-costa">Laia Costa</label><br>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Mejor actor protagonista</legend>
+                            <input type="radio" id="manolo-solo" name="mejor-actor-protagonista" value="manolo-solo">
+                            <label for="manolo-solo">Manolo Solo</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="enric-auquer" name="mejor-actor-protagonista" value="enric-auquer">
+                            <label for="enric-auquer">Enric Auquer</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="david-verdaguer" name="mejor-actor-protagonista"
+                                value="david-verdaguer">
+                            <label for="david-verdaguer">David Verdaguer</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="hovik-keuchkerian" name="mejor-actor-protagonista"
+                                value="hovik-keuchkerian">
+                            <label for="hovik-keuchkerian">Hovik Keuchkerian</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="alberto-ammann" name="mejor-actor-protagonista"
+                                value="alberto-ammann">
+                            <label for="alberto-ammann">Alberto Amman</label><br>
+                        </fieldset>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #dfd5c1; margin: 20px 0;">
+                    <h2
+                        style="font-size: 2.8rem; text-align: center; color: #cbbea3; font-weight: 200; padding-bottom: 1rem;">
+                        Otras categorías</h2>
+                    <div style="display:flex; flex-direction: row">
+                        <fieldset>
+                            <legend>Mejor actriz de reparto</legend>
+                            <input type="radio" id="ane-gabarain" name="mejor-actriz-reparto" value="ane-gabarain">
+                            <label for="ane-gabarain">Ane Gabarain</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="itziar-lazkano" name="mejor-actriz-reparto" value="itziar-lazkano">
+                            <label for="itziar-lazkano">Itziar Lazkano</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="ana-torrent" name="mejor-actriz-reparto" value="ana-torrent">
+                            <label for="ana-torrent">Ana Torrent</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="clara-segura" name="mejor-actriz-reparto" value="clara-segura">
+                            <label for="clara-segura">Clara Segura</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="luisa-gavasa" name="mejor-actriz-reparto" value="luisa-gavasa">
+                            <label for="luisa-gavasa">Luisa Gavasa</label><br>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Mejor actor de reparto</legend>
+                            <input type="radio" id="martxelo-rubio" name="mejor-actor-reparto" value="martxelo-rubio">
+                            <label for="martxelo-rubio">Martxelo Rubio</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="jc-bellido" name="mejor-actor-reparto" value="jc-bellido">
+                            <label for="jc-bellido">Juan Carlos Vellido</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="jose-coronado" name="mejor-actor-reparto" value="jose-coronado">
+                            <label for="jose-coronado">José Coronado</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="alex-brendemuhl" name="mejor-actor-reparto" value="alex-brendemuhl">
+                            <label for="alex-brendemuhl">Álex Brendemühl</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="hugo-silva" name="mejor-actor-reparto" value="hugo-silva">
+                            <label for="hugo-silva">Hugo Silva</label><br>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Mejor actriz revelación</legend>
+                            <input type="radio" id="xinyi-ye" name="mejor-actriz-revelacion" value="xinyi-ye">
+                            <label for="xinyi-ye">Xinyi Ye</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="yeju-ji" name="mejor-actriz-revelacion" value="yeju-ji">
+                            <label for="yeju-ji">Yeju Ji</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="claudia-malagelada" name="mejor-actriz-revelacion"
+                                value="claudia-malagelada">
+                            <label for="claudia-malagelada">Clàudia Malagelada</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="sara-becker" name="mejor-actriz-revelacion" value="sara-becker">
+                            <label for="sara-becker">Sara Becker</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="janet-novas" name="mejor-actriz-revelacion" value="janet-novas">
+                            <label for="janet-novas">Janet Novás</label><br>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Mejor actor revelación</legend>
+                            <input type="radio" id="brianeitor" name="mejor-actor-revelacion" value="brianeitor">
+                            <label for="brianeitor">Brianeitor</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="julio-hu-chen" name="mejor-actor-revelacion" value="julio-hu-chen">
+                            <label for="julio-hu-chen">Julio Hu Chen</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="matias-recalt" name="mejor-actor-revelacion" value="matias-recalt">
+                            <label for="matias-recalt">Matías Recalt</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="la-dani" name="mejor-actor-revelacion" value="la-dani">
+                            <label for="la-dani">La Dani</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="omar-banana" name="mejor-actor-revelacion" value="omar-banana">
+                            <label for="omar-banana">Omar Banana</label><br>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Mejor dirección novel</legend>
+                            <input type="radio" id="estibaliz-urresola" name="mejor-direccion-novel"
+                                value="estibaliz-urresola">
+                            <label for="estibaliz-urresola">Estibaliz Urresola</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="itsaso-arana" name="mejor-direccion-novel" value="itsaso-arana">
+                            <label for="itsaso-arana">Itsaso Arana</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="alvaro-gago" name="mejor-direccion-novel" value="alvaro-gago">
+                            <label for="alvaro-gago">Álvaro Gago</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="alejandro-marin" name="mejor-direccion-novel"
+                                value="alejandro-marin">
+                            <label for="alejandro-marin">Alejandro Marín</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="alejandro-rojas-vasquez" name="mejor-direccion-novel"
+                                value="alejandro-rojas-vasquez">
+                            <label for="alejandro-rojas-vasquez">A. Rojas y J. Sebastián
+                                Vásquez</label><br>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Mejor guión original</legend>
+                            <input type="radio" id="20000-especies-guion" name="mejor-guion"
+                                value="20000-especies-guion">
+                            <label for="20000-especies-guion">Estibaliz Urresola</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="cerrar-ojos-guion" name="mejor-guion" value="cerrar-ojos-guion">
+                            <label for="cerrar-ojos-guion">Michel Gaztambide y Víctor Erice</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="te-estoy-amando-guion" name="mejor-guion"
+                                value="te-estoy-amando-guion">
+                            <label for="te-estoy-amando-guion">Alejadro Marin y Carmen Garrido</label><br>
+                            <input type="radio" id="una-vida-simple-guion" name="una-vida-simple-novel"
+                                value="una-vida-simple-guion">
+                            <label for="una-vida-simple-guion">Féliz Viscarret</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="upon-entry-guion" name="mejor-guion"
+                                value="upon-entry-guion">
+                            <label for="upon-entry-guion">A. Rojas y J. Sebastián
+                                Vásquez</label><br>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Mejor sonido</legend>
+                            <input type="radio" id="20000-especies-sonido" name="mejor-sonido"
+                                value="20000-especies-sonido">
+                            <label for="20000-especies-sonido">20.000 especies de abejas</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="campeonex-sonido" name="mejor-sonido" value="campeonex-sonido">
+                            <label for="campeonex-sonido">Campeonex</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="cerrar-ojos-sonido" name="mejor-sonido" value="cerrar-ojos-sonido">
+                            <label for="cerrar-ojos-sonido">Cerrar los ojos</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="sociedad-nieve-sonido" name="mejor-sonido"
+                                value="sociedad-nieve-sonido">
+                            <label for="sociedad-nieve-sonido">La sociedad de la nieve</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="saben-aquell-sonido" name="mejor-sonido"
+                                value="saben-aquell-sonido">
+                            <label for="saben-aquell-sonido">Saben aquell</label><br>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Mejores efectos</legend>
+                            <input type="radio" id="20000-especies-efectos" name="mejores-efectos"
+                                value="20000-especies-efectos">
+                            <label for="20000-especies-efectos">20.000 especies de abejas</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="la-ermita-efectos" name="mejores-efectos" value="la-ermita-efectos">
+                            <label for="la-ermita-efectos">La ermita</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="sociedad-nieve-efectos" name="mejores-efectos"
+                                value="sociedad-nieve-efectos">
+                            <label for="sociedad-nieve-efectos">La sociedad de la nieve</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="tin-tina-efectos" name="mejores-efectos" value="tin-tina-efectos">
+                            <label for="tin-tina-efectos">Tin & Tina</label><br>
+                            <hr class="separacion-etiqueta">
+                            <input type="radio" id="valle-sombras-efectos" name="mejores-efectos"
+                                value="valle-sombras-efectos">
+                            <label for="valle-sombras-efectos">Valle de sombras</label><br>
+                        </fieldset>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+
+
+        const img = {
+            // Mejor película
+            "especies-abejas": "/img/premiados/especies-abejas.png",
+            "cerrar-ojos": "/img/premiados/cerrar-ojos.png",
+            "saben-aquell": "/img/premiados/saben-aquell.png",
+            "sociedad-nieve": "/img/premiados/sociedad-nieve.png",
+            "un-amor": "/img/premiados/un-amor.png",
+            // Mejor director
+            "victor-erice": "/img/premiados/erice.png",
+            "elena-martin": "/img/premiados/elena-martin.png",
+            "ja-bayona": "/img/premiados/ja-bayona.png",
+            "david-trueba": "/img/premiados/david-trueba.png",
+            "isabel-coixet": "/img/premiados/isabel-coixet.png",
+            // Mejor actriz protagonista
+            "patricia-arnaiz": "/img/premiados/patricia-arnaiz.png",
+            "maria-vazquez": "/img/premiados/maria-vazquez.png",
+            "malena-alterio": "/img/premiados/malena-alterio.png",
+            "carolina-yuste": "/img/premiados/carolina-yuste.png",
+            "laia-costa": "/img/premiados/laia-costa.png",
+            // Mejor actor protagonista
+            "manolo-solo": "/img/premiados/manolo-solo.png",
+            "enric-auquer": "/img/premiados/enric-auquer.png",
+            "david-verdaguer": "/img/premiados/david-verdaguer.png",
+            "hovik-keuchkerian": "/img/premiados/hovik-keuchkerian.png",
+            "alberto-ammann": "/img/premiados/alberto-ammann.png",
+            // Mejor actriz de reparto
+            "ane-gabarain": "/img/premiados/ane-gabarain.png",
+            "itziar-lazkano": "/img/premiados/itziar-lazkano.png",
+            "ana-torrent": "/img/premiados/ana-torrent.png",
+            "clara-segura": "/img/premiados/clara-segura.png",
+            "luisa-gavasa": "/img/premiados/luisa-gavasa.png",
+            // Mejor actor de reparto
+            "martxelo-rubio": "/img/premiados/martxelo-rubio.png",
+            "jc-bellido": "/img/premiados/jc-bellido.png",
+            "jose-coronado": "/img/premiados/jose-coronado.png",
+            "alex-brendemuhl": "/img/premiados/alex-brendemuhl.png",
+            "hugo-silva": "/img/premiados/hugo-silva.png",
+            // Mejor actriz revelación
+            "xinyi-ye": "/img/premiados/xinyi-ye.png",
+            "yeju-ji": "/img/premiados/yeju-ji.png",
+            "claudia-malagelada": "/img/premiados/claudia-malagelada.png",
+            "sara-becker": "/img/premiados/sara-becker.png",
+            "janet-novas": "/img/premiados/janet-novas.png",
+            // Mejor actor revelación
+            "brianeitor": "/img/premiados/brianeitor.png",
+            "julio-hu-chen": "/img/premiados/julio-hu-chen.png",
+            "matias-recalt": "/img/premiados/matias-recalt.png",
+            "la-dani": "/img/premiados/la-dani.png",
+            "omar-banana": "/img/premiados/omar-banana.png",
+            // Mejor dirección novel
+            "estibaliz-urresola": "/img/premiados/estibaliz-urresola.png",
+            "itsaso-arana": "/img/premiados/itsaso-arana.png",
+            "alvaro-gago": "/img/premiados/alvaro-gago.png",
+            "alejandro-marin": "/img/premiados/alejandro-marin.png",
+            "alejandro-rojas-vasquez": "/img/premiados/alejandro-rojas-vasquez.png",
+            // Mejor guión
+            "20000-especies-guion": "/img/premiados/20000-especies-guion.png",
+            "cerrar-ojos-guion": "/img/premiados/cerrar-ojos-guion.png",
+            "una-vida-simple-guion": "/img/premiados/una-vida-simple-guion.png",
+            "te-estoy-amando-guion": "/img/premiados/te-estoy-amando-guion.png",
+            "upon-entry-guion": "/img/premiados/upon-entry-guion.png",
+            // Mejor sonido
+            "20000-especies-sonido": "/img/premiados/20000-especies-sonido.png",
+            "campeonex-sonido": "/img/premiados/campeonex-sonido.png",
+            "cerrar-ojos-sonido": "/img/premiados/cerrar-ojos-sonido.png",
+            "sociedad-nieve-sonido": "/img/premiados/sociedad-nieve-sonido.png",
+            "saben-aquell-sonido": "/img/premiados/saben-aquell-sonido.png",
+            // Mejores efectos
+            "20000-especies-efectos": "/img/premiados/20000-especies-efectos.png",
+            "la-ermita-efectos": "/img/premiados/la-ermita-efectos.png",
+            "sociedad-nieve-efectos": "/img/premiados/sociedad-nieve-efectos.png",
+            "tin-tina-efectos": "/img/premiados/tin-tina-efectos.png",
+            "valle-sombras-efectos": "/img/premiados/valle-sombras-efectos.png"
+        };
+
+        // cambio de imagen
+
+        function cambiarImagen(categoria, valor) {
+            const imgElement = document.getElementById(`img-${categoria}`);
+            imgElement.src = img[valor];
+        }
+
+        // Agregar event listeners a los botones de radio
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function () {
+                const categoria = this.name; // Nombre de la categoría
+                const valor = this.value; // Valor del botón de radio seleccionado
+                cambiarImagen(categoria, valor);
+            });
+        });
+
+        // Botón de descarga
+
+        document.getElementById("descarga-imagen").addEventListener("click", function () {
+            let main = document.querySelector("main");
+
+            html2canvas(main, {
+                scale: 4
+            }).then(canvas => {
+                let a = document.createElement("a");
+                a.href = canvas.toDataURL("image/jpg");
+                a.download = "goya.jpg";
+
+                a.click();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
